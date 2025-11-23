@@ -1,0 +1,51 @@
+MODEL:
+  INPUT_CHANS: 3
+  LAYER_CONF: [{"out_channels": 16, "kernel_size": 4, "do_pool": True},
+            {"out_channels": 64, "kernel_size": 4, "do_pool": True},
+            {"out_channels": 128, "kernel_size": 4, "do_pool": True},
+            {"out_channels": 256, "kernel_size": 4, "do_pool": True},
+            {"out_channels": 128, "kernel_size": 4, "do_pool": True},
+            {"out_channels": 64, "kernel_size": 4, "do_pool": True},
+            {"out_channels": 32, "kernel_size": 4, "do_pool": False}
+            ]
+
+  
+  SEQ_LEN: 960
+  DROP_RATE: 0.1
+
+SOLVER:
+  BASE_LR: 0.001
+  COSINE_END_LR: 0.0000001
+  OPTIMIZING_METHOD: adamw
+  WEIGHT_DECAY: 1e-5
+  MAX_EPOCH: 20
+  LR_POLICY: cosine
+
+TRAIN:
+  ENABLE: True
+  DATASET: MagGI
+  BATCH_SIZE: 128
+  CHECKPOINT_PERIOD: 1
+  EVAL_PERIOD: 1
+  AUTO_RESUME: False
+
+TEST:
+  ENABLE: True
+  DATASET: MagGI
+  BATCH_SIZE: 4096
+  CHECKPOINT_FILE_PATH: Magconv/trained_NNs/CNN_swine/checkpoint_epoch_00020.pyth
+
+DATA:
+  PATH_TO_DATA_DIR: Data/
+
+DATA_LOADER:
+  NUM_WORKERS: 8
+  PIN_MEMORY: True
+
+GPU_ENABLE: True
+RNG_SEED: 0
+LOG_PERIOD: 200
+OUTPUT_DIR: Magconv/results/swine
+MODEL_NAME: mcnn_base
+GPU_ID: 1
+
