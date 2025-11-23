@@ -48,7 +48,7 @@ python Magconv/tools/run_mcnn.py \
   GPU_ENABLE True \
   GPU_ID 0 \
   TRAIN.ENABLE False \ 
-  TEST.CHECKPOINT_FILE_PATH: Magconv/trained_NNs/CNN_swine/checkpoint_epoch_00020.pyth \
+  TEST.CHECKPOINT_FILE_PATH Magconv/trained_NNs/CNN_swine/checkpoint_epoch_00020.pyth \
   DATA.PATH_TO_DATA_DIR Data/ \
   OUTPUT_DIR Magconv/results/swine  
 ```
