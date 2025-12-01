@@ -29,7 +29,7 @@ cd iMMG
 # Usage
 ## Data Preparation
 
-Download our data via [link](https://gocuhk-my.sharepoint.com/my?id=%2Fpersonal%2Fdelinhu%5Fcuhk%5Fedu%5Fhk%2FDocuments%2FData%2Ezip&parent=%2Fpersonal%2Fdelinhu%5Fcuhk%5Fedu%5Fhk%2FDocuments&ga=1) or from Zenodo (release soon) to `iMMG` folder and uncompress.
+Download our data via [link](https://gocuhk-my.sharepoint.com/:u:/g/personal/delinhu_cuhk_edu_hk/IQCxvLdKuAaST7kVEduqiA5WAfNlAYcJgvaSftFk4XXdhZk) or from Zenodo (release soon) to `iMMG` folder and uncompress.
 
 ## Training
 ```
